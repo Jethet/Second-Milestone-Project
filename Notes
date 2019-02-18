@@ -1,0 +1,23 @@
+This is the second Milestone Project from the Udemy Python course.
+The goal is to create a (simplified) blackjack game.
+Not interested in cards, have never played blackjack, don't know
+anything about it so that is not very helpful.
+
+The idea is to use OOP for this programme.
+
+There will only be a computer as dealer, and a human player.
+
+The normal deck of cards will be used so a representation of this
+will have to be created in Python.
+
+The human player has an attribute (bankroll) from which he can place
+a bet.
+
+The player starts with two cards face up; the computer dealer
+starts with one card face up, one card face down.
+
+The player goes first. Player goal: get closer to value of 21 than the computer dealer does.
+Actions:
+  1) HIT = receive another card from the deck
+  2) STAY = stop receiving cards
+Other blackjack actions are ignored.
