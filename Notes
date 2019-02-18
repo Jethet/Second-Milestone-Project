@@ -5,7 +5,7 @@ anything about it so that is not very helpful.
 
 The idea is to use OOP for this programme.
 
-There will only be a computer as dealer, and a human player.
+There will be a computer as dealer and Milestone human player.
 
 The normal deck of cards will be used so a representation of this
 will have to be created in Python.
@@ -31,10 +31,11 @@ will hit (get card from deck) until either it beats the player or the
 dealer is bust, i.e. goes over 21.
 
 The game ends when:
-  1) player goes over 21 even before the dealer goes, player is bust and
+  1) player goes over 21 even before the dealer goes: player is bust and
      loses the bet. The dealer collects the money;
-  2) player hits 21 and is the winner;
-  3) computer dealer goes, can beat the player;
+  2) player hits 21 and is the winner, gets double the bet money;
+  3) computer dealer goes, can beat the player if 21 right away;
+  4) computer dealer hits closer to 21 than player;
   4) computer busts and player has won: in this case the player gets
      double their bet money in their bankroll.
 
@@ -42,3 +43,20 @@ SPECIAL RULES:
 - Face cards (King, Queen, Jack) count as a value of 10.
 - Ace can count as either 1 or 11, whichever the player prefers
 - Rest of the cards have value as printed on them.
+
+COMPLETE OVERVIEW OF STEPS:
+
+To play a hand of Blackjack the following steps must be followed:
+
+    Create a deck of 52 cards
+    Shuffle the deck
+    Ask the Player for their bet
+    Make sure that the Player's bet does not exceed their available chips
+    Deal two cards to the Dealer and two cards to the Player
+    Show only one of the Dealer's cards, the other remains hidden
+    Show both of the Player's cards
+    Ask the Player if they wish to Hit, and take another card
+    If the Player's hand doesn't Bust (go over 21), ask if they'd like to Hit again.
+    If a Player Stands, play the Dealer's hand. The dealer will always Hit until the Dealer's value meets or exceeds 17
+    Determine the winner and adjust the Player's chips accordingly
+    Ask the Player if they'd like to play again
