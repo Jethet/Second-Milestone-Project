@@ -30,7 +30,7 @@ class Deck():
                 self.deck.append(Card(suit,rank))
 
     def __str__(self):
-        deck_comp = ''
+        deck_comp = ''      # Empty string for total deck composition
         for card in self.deck:
             deck_comp += '\n' + card.__str__()
         return "The deck has: "+deck_comp
@@ -42,7 +42,7 @@ class Deck():
     def deal():
         single_card = self.deck.pop()   # 1) grab deck attricute of deck class
         return single_card              # 2) pop off a card item from that list
-                                        # 3) set that to single_card
+                                        # 3) set that to single_card and return
 
 
 # This runs OK and prints the entire deck, shuffled.
