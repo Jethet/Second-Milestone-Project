@@ -39,7 +39,7 @@ class Deck():
     def shuffle(self):
         random.shuffle(self.deck)
 
-    def deal():
+    def deal(self):
         single_card = self.deck.pop()   # 1) grab deck attricute of deck class
         return single_card              # 2) pop off a card item from that list
                                         # 3) set that to single_card and return
@@ -49,5 +49,7 @@ class Deck():
 #test_deck = Deck()
 #test_deck.shuffle()
 #print(test_deck)
+
+
 
 #
