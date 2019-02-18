@@ -16,8 +16,29 @@ a bet.
 The player starts with two cards face up; the computer dealer
 starts with one card face up, one card face down.
 
-The player goes first. Player goal: get closer to value of 21 than the computer dealer does.
+The player goes first. Player goal:
+- get closer to value of 21 than the computer dealer does, or
+- get 21 points on his first two cards, or
+- let the dealer draw additional cards until dealer exceeds 21.
+
 Actions:
   1) HIT = receive another card from the deck
   2) STAY = stop receiving cards
-Other blackjack actions are ignored.
+Other blackjack actions are ignored to keep the game simple.
+
+Once player is finished, the computer dealer takes the turn. The dealer
+will hit (get card from deck) until either it beats the player or the
+dealer is bust, i.e. goes over 21.
+
+The game ends when:
+  1) player goes over 21 even before the dealer goes, player is bust and
+     loses the bet. The dealer collects the money;
+  2) player hits 21 and is the winner;
+  3) computer dealer goes, can beat the player;
+  4) computer busts and player has won: in this case the player gets
+     double their bet money in their bankroll.
+
+SPECIAL RULES:
+- Face cards (King, Queen, Jack) count as a value of 10.
+- Ace can count as either 1 or 11, whichever the player prefers
+- Rest of the cards have value as printed on them.
