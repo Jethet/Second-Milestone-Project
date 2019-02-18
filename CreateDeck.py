@@ -45,8 +45,9 @@ class Deck():
                                         # 3) set that to single_card
 
 
-
-test_deck = Deck()
-print(test_deck)
+# This runs OK and prints the entire deck, shuffled.
+#test_deck = Deck()
+#test_deck.shuffle()
+#print(test_deck)
 
 #
