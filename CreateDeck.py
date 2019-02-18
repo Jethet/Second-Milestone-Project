@@ -46,6 +46,7 @@ class Deck():
 
 
 
-
+test_deck = Deck()
+print(test_deck)
 
 #
