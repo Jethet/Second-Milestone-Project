@@ -49,3 +49,8 @@ class Chips():
 def take_bet(chips):
 def hit(deck,hand):
 def hit_or_stand(deck,hand):
+def player_busts(player,dealer,chips):
+def player_wins(player,dealer,chips):
+def dealer_busts(player,dealer,chips):
+def dealer_wins(player,dealer,chips):
+def push(player,dealer):
