@@ -40,7 +40,7 @@ class Deck():
         random.shuffle(self.deck)
 
     def deal(self):
-        single_card = self.deck.pop()   # 1) grab deck attricute of deck class
+        single_card = self.deck.pop()   # 1) grab deck attribute of deck class
         return single_card              # 2) pop off a card item from that list
                                         # 3) set that to single_card and return
 
@@ -64,17 +64,25 @@ class Hand:
         self.cards.append(card)
         self.value += values[card.rank]
 
+        # Track aces:
+        if card.rank == 'Ace':
+            self.aces += 1
+
+
     def adjust_for_ace(self):
-        pass
+        # If total value > 21 and still ace in hand of player:
+        # then change Ace to be 1 instead of 11:
+        while self.value > 21 and self.aces:
+            self.value -= 10
+            self.aces -= 1
+
 
 test_deck = Deck()
 test_deck.shuffle()
 # create player:
 test_player = Hand()
 # deal 1 card from deck: CARD(suit,rank)
-pulled_card = test_deck.deal()
-print(pulled_card)
-test_player.add_card(pulled_card)
+test_player.add_card(test_deck.deal())
 print(test_player.value)
 
 
