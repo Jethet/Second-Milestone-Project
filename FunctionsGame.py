@@ -1,7 +1,6 @@
 # The functions to be used to play the blackjack game:
 
 def take_bet(chips):
-
     while True:
         try:
             chips.bet = int(input("How many chips do you want to bet? "))
@@ -55,6 +54,31 @@ def dealer_wins(player,dealer,chips):
 
 def push(player,dealer):
     print('Dealer and player tie! PUSH!')
+
+# The following are functions to display cards: at the start and after each
+# time the player hits, the dealer's first card is hidden but all of player's
+# cards ar visible. At the end of the hand all cards are shown.
+
+def show_some(player,dealer):
+    print("Dealer's hand:")
+    print("one card hidden:"")
+    print(dealer.cards[1])
+    print("\n")
+    print("Player's hand:")
+    for card in player.cards:
+        print(card)
+
+def show_all(player,dealer):
+    print("Dealer's hand:")
+    for card in dealer.cards:
+        print(card)
+    print("\n")
+    for card in player.cards:
+        print(card)
+
+
+
+
 
 
 
