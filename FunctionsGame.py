@@ -34,6 +34,28 @@ def hit_or_stand(deck,hand):
             continue
         break
 
+# The following are functions to handle END OF GAME scenarios:
+# parameters are player's hand, dealer's hand and chips.
+
+def player_busts(player,dealer,chips):
+    print("Bust player!")
+    chips.lose_bet()
+
+def player_wins(player,dealer,chips):
+    print("Player wins!")
+    chips.win_bet()
+
+def dealer_busts(player,dealer,chips):
+    print("Dealer busted. Player wins!")
+    chips.win_bet()
+
+def dealer_wins(player,dealer,chips):
+    print("Dealer wins!")
+    chips.lose_bet()
+
+def push(player,dealer):
+    print('Dealer and player tie! PUSH!')
+
 
 
 #
