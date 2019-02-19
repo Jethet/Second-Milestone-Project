@@ -70,11 +70,26 @@ class Hand:
 
 
     def adjust_for_ace(self):
-        # If total value > 21 and still ace in hand of player:
+        # If total value IN HAND > 21 and still ace in hand of player:
         # then change Ace to be 1 instead of 11:
-        while self.value > 21 and self.aces:
+        while self.value > 21 and self.aces: > 0  # 0 = False, over 0 = True
             self.value -= 10
             self.aces -= 1
+
+
+class Chips():
+
+    def __init__(self):
+        self.total = 100
+        self.bet = 0
+
+    def win_bet(self):
+        self.total += self.bet
+
+    def lose_bet(self):
+        self.total -= self.bet
+
+
 
 
 test_deck = Deck()
