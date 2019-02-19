@@ -91,7 +91,7 @@ class Chips():
 
 
 
-
+# Test that value of card is added to player's value:
 test_deck = Deck()
 test_deck.shuffle()
 # create player:
