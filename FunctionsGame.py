@@ -14,7 +14,8 @@ def take_bet(chips):
             else:
                 break
 
-def hit(deck, hand):
+def hit(deck, hand):  # this function will be called during gameplay anytime
+                        # player requests a hit or dealer's hand < 17
     single_card = deck.deal()
     hand.add_card(single_card)
     hand.adjust_for_ace()
@@ -28,7 +29,6 @@ def hit_or_stand(deck,hand):
         elif x[0].lower() == 's':
             print("Player Stands. Dealer's turn.")
             playing = False
-
         else:
             print("Please enter h or s only.")
             continue
