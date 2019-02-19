@@ -45,3 +45,7 @@ class Chips():
         self.total += self.bet
     def lose_bet(self):
         self.total -= self.bet
+
+def take_bet(chips):
+def hit(deck,hand):
+def hit_or_stand(deck,hand):
