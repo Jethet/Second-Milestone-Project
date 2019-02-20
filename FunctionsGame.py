@@ -61,7 +61,7 @@ def push(player,dealer):
 
 def show_some(player,dealer):
     print("Dealer's hand:")
-    print("one card hidden:"")
+    print("one card hidden")
     print(dealer.cards[1])
     print("\n")
     print("Player's hand:")

@@ -73,7 +73,7 @@ class Hand:
     def adjust_for_ace(self):
         # If total value IN HAND > 21 and still ace in hand of player:
         # then change Ace to be 1 instead of 11:
-        while self.value > 21 and self.aces: > 0  # 0 = False, over 0 = True
+        while self.value > 21 and self.aces > 0:  # 0 = False, over 0 = True
             self.value -= 10
             self.aces -= 1
 
