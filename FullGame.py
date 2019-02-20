@@ -49,7 +49,7 @@ class Hand:
             self.aces += 1
 
     def adjust_for_ace(self):
-        while self.value > 21 and self.aces: > 0
+        while self.value > 21 and self.aces > 0:
             self.value -= 10
             self.aces -= 1
 
@@ -117,7 +117,7 @@ def push(player,dealer):
 
 def show_some(player,dealer):
     print("Dealer's hand:")
-    print("one card hidden:"")
+    print("one card hidden")
     print(dealer.cards[1])
     print("\n")
     print("Player's hand:")
@@ -132,6 +132,7 @@ def show_all(player,dealer):
     for card in player.cards:
         print(card)
 
+# This is the logic for the game:
 while True:
     print("Welcome to Blackjack!")
     deck = Deck()
