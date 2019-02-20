@@ -29,6 +29,7 @@ class Deck():
             for rank in ranks:
                 self.deck.append(Card(suit,rank))
 
+    # This method prints the deck:
     def __str__(self):
         deck_comp = ''      # Empty string for total deck composition
         for card in self.deck:
