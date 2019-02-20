@@ -30,5 +30,33 @@ while True:
         # if player's hand > 21, run player_busts() and break out of loop:
         if player_hand.value > 21:
             player_busts(player_hand,dealer_hand,player_chips)
-
             break
+    # if player has not busted, play dealer's hand until dealer has 17:
+    if player_hand.value <= 21:
+        while dealer_hand.value < 17:
+            hit(deck,dealer_hand)
+        # dealer is playing so all cards should be visible:
+        show_all(player_hand,dealer_hand)
+
+        # run different scenarios for winning:
+        if dealer_hand.value > 21:
+            dealer_busts(player_hand,dealer_hand,player_chips)
+        elif dealer_hand.value > player_hand.value:
+            dealer_wins(player_hand,dealer_hand,player_chips)
+        elif dealer_hand.value < player_hand.value:
+            player_wins(player_hand,dealer_hand,player_chips)
+        else:
+            push(player_hand,dealer_hand)
+
+    # inform player of their chips total:
+    print('\nPlayer total chips are at: {}'.format(player_chips.total))
+    # ask player if they want to play again:
+    new_game = input("Would you like to play again? y/n")
+    if new_game[0].lower() == 'y':
+        playing = True
+        continue
+    else:
+        print("Thank you for playing.")
+        break
+
+    #
